@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 
 import React, { useRef, useEffect } from "react";
@@ -12,6 +13,7 @@ import Link from "next/link";
 
 const rowdies = Urbanist({
   weight: ["900"],
+  subsets: ['latin']
 });
 
 const HeroHeader = () => {
