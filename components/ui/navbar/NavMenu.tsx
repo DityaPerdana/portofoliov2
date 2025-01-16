@@ -3,7 +3,7 @@
 import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import MagneticEffect from "@/components/providers/MagneticEffect";
 import NavMenuBtn from "./NavMenuBtn";
 import NavMenuLine from "./NavMenuLine";
