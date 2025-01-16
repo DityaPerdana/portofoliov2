@@ -5,7 +5,10 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import { Montserrat } from "next/font/google";
 
-const monse = Montserrat();
+const monse = Montserrat({
+  weight: ["900"],
+  subsets: ['latin']
+});
 
 interface props {
   title: string;
