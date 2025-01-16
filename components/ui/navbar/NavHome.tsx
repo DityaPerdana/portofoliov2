@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect"
-import gsap from "gsap"
-import { Code2 } from "lucide-react"
-import Link from "next/link"
-import { useRef } from "react"
+import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect";
+import gsap from "gsap";
+import { Code2 } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
 
 export default function NavHome() {
-  const el = useRef<HTMLDivElement | null>(null)
+  const el = useRef<HTMLDivElement | null>(null);
 
   useIsomorphicLayoutEffect(() => {
     gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.5 })
-      tl.to(el.current, { x: 0, duration: 2, ease: "power4.inOut" }, 0)
-    }, el)
-  }, [])
+      const tl = gsap.timeline({ delay: 0.5 });
+      tl.to(el.current, { x: 0, duration: 2, ease: "power4.inOut" }, 0);
+    }, el);
+  }, []);
 
   return (
     <div
@@ -28,5 +28,5 @@ export default function NavHome() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

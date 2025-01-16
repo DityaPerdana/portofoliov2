@@ -1,5 +1,5 @@
-import NavHome from "./NavHome"
-import NavMenu from "./NavMenu"
+import NavHome from "./NavHome";
+import NavMenu from "./NavMenu";
 
 export default function Nav() {
   return (
@@ -7,5 +7,5 @@ export default function Nav() {
       <NavHome />
       <NavMenu />
     </nav>
-  )
+  );
 }

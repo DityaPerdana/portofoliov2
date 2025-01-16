@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect"
-import gsap from "gsap"
-import { useEffect, useRef } from "react"
+import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 interface NavMenuLinkProps {
-  title: string
-  active: boolean
-  duration: number
-  handleScroll: () => void
+  title: string;
+  active: boolean;
+  duration: number;
+  handleScroll: () => void;
 }
 
 export default function NavMenuLink({
@@ -17,8 +17,8 @@ export default function NavMenuLink({
   duration,
   handleScroll,
 }: NavMenuLinkProps) {
-  const el = useRef<HTMLDivElement | null>(null)
-  const tl = useRef<GSAPTimeline | null>(gsap.timeline({ paused: true }))
+  const el = useRef<HTMLDivElement | null>(null);
+  const tl = useRef<GSAPTimeline | null>(gsap.timeline({ paused: true }));
 
   useIsomorphicLayoutEffect(() => {
     gsap.context(() => {
@@ -26,19 +26,19 @@ export default function NavMenuLink({
         el.current,
         { x: 150 },
         { x: 0, duration: duration, ease: "power3.inOut" },
-        0
-      )
-    }, el)
+        0,
+      );
+    }, el);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (active) {
-      tl.current?.play()
+      tl.current?.play();
     } else {
-      tl.current?.reverse()
+      tl.current?.reverse();
     }
-  }, [active])
+  }, [active]);
 
   return (
     <div ref={el}>
@@ -50,5 +50,5 @@ export default function NavMenuLink({
         <div className="h-3 w-3 origin-center scale-0 rounded-full bg-zinc-200 transition group-hover:scale-100 dark:bg-zinc-800" />
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface InteractiveHoverButtonProps

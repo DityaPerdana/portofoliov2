@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect"
-import { cn } from "@/lib/utils"
-import gsap from "gsap"
-import Link from "next/link"
-import { useEffect, useRef } from "react"
+import useIsomorphicLayoutEffect from "@/components/hooks/useIsomorphicLayoutEffect";
+import { cn } from "@/lib/utils";
+import gsap from "gsap";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 interface NavMenuSocialProps {
-  title: string
-  active: boolean
-  duration: number
-  classes: string
-  link: string
+  title: string;
+  active: boolean;
+  duration: number;
+  classes: string;
+  link: string;
 }
 
 export default function NavMenuSocial({
@@ -21,28 +21,28 @@ export default function NavMenuSocial({
   classes,
   link,
 }: NavMenuSocialProps) {
-  const el = useRef<HTMLDivElement | null>(null)
-  const tl = useRef<GSAPTimeline | null>(gsap.timeline({ paused: true }))
+  const el = useRef<HTMLDivElement | null>(null);
+  const tl = useRef<GSAPTimeline | null>(gsap.timeline({ paused: true }));
 
   useIsomorphicLayoutEffect(() => {
-    if(!el.current) return console.log("el.current is null")
+    if (!el.current) return console.log("el.current is null");
     gsap.context(() => {
       tl.current?.fromTo(
         el.current,
         { x: 150 },
-        { x: 0, duration: duration, ease: "power3.inOut" }
-      )
-    }, el)
+        { x: 0, duration: duration, ease: "power3.inOut" },
+      );
+    }, el);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (active) {
-      tl.current?.play()
+      tl.current?.play();
     } else {
-      tl.current?.reverse()
+      tl.current?.reverse();
     }
-  }, [active])
+  }, [active]);
 
   return (
     <Link
@@ -53,5 +53,5 @@ export default function NavMenuSocial({
       <p className="text-zinc-200 dark:text-zinc-800">{title}</p>
       <div className="h-[2px] w-full origin-center -translate-y-2 scale-x-0 rounded-full bg-zinc-200 transition group-hover:translate-y-0 group-hover:scale-x-100 dark:bg-zinc-800" />
     </Link>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import React from "react"
-import { Separator } from "@radix-ui/react-separator"
+import React from "react";
+import { Separator } from "@radix-ui/react-separator";
 
 interface NavMenuLineProps {
-  title: string
+  title: string;
 }
 
 export default function NavMenuLine({ title }: NavMenuLineProps) {
@@ -13,5 +13,5 @@ export default function NavMenuLine({ title }: NavMenuLineProps) {
       </span>
       <Separator className="mt-2 mb-2 bg-zinc-200/50 dark:bg-zinc-800/25" />
     </div>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import Image from "next/image";
+import { TextAnimate } from "./text-animate";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -15,7 +16,7 @@ const Circle = forwardRef<
       ref={ref}
       className={cn(
         "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className
+        className,
       )}
     >
       {children}
@@ -43,11 +44,14 @@ export function SkillContainer() {
     <div
       className="relative flex flex-col h-[100vh] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
       ref={containerRef}
+      id="skills"
     >
-        <h1 className="font-bold sm:text-5xl text-4xl">My Capabilities🔥</h1>
+      <TextAnimate className="font-bold sm:text-5xl text-4xl">
+        My Capabilities🔥
+      </TextAnimate>
       <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-3 my-24">
         <div className="flex flex-row items-center justify-between">
-        <Circle ref={div10Ref} className="size-16">
+          <Circle ref={div10Ref} className="size-16">
             <Image src="./postgre.svg" alt="html icon" width={50} height={50} />
           </Circle>
           <Circle ref={div11Ref} className="size-16">
@@ -59,7 +63,12 @@ export function SkillContainer() {
             <Image src="./html.svg" alt="html icon" width={50} height={50} />
           </Circle>
           <Circle ref={div5Ref} className="size-16">
-            <Image src="./typescript.svg" alt="html icon" width={50} height={50} />
+            <Image
+              src="./typescript.svg"
+              alt="html icon"
+              width={50}
+              height={50}
+            />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
@@ -67,7 +76,13 @@ export function SkillContainer() {
             <Image src="./css.svg" alt="html icon" width={50} height={50} />
           </Circle>
           <Circle ref={div4Ref} className="size-32">
-            <Image className="rounded-full bg-cover scale-125 hover:scale-150 transition ease-out" src="/pfp.webp" alt="html icon" width={900} height={900} />
+            <Image
+              className="rounded-full bg-cover scale-125 hover:scale-150 transition ease-out"
+              src="/pfp.webp"
+              alt="html icon"
+              width={900}
+              height={900}
+            />
           </Circle>
           <Circle ref={div6Ref} className="size-16">
             <Image src="./react.svg" alt="html icon" width={50} height={50} />
@@ -75,7 +90,12 @@ export function SkillContainer() {
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref} className="size-16">
-            <Image src="./javascript-logo.svg" alt="html icon" width={50} height={50} />
+            <Image
+              src="./javascript-logo.svg"
+              alt="html icon"
+              width={50}
+              height={50}
+            />
           </Circle>
           <Circle ref={div7Ref} className="size-16">
             <Image src="./nextjs.svg" alt="html icon" width={50} height={50} />
@@ -83,10 +103,20 @@ export function SkillContainer() {
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div8Ref} className="size-16">
-            <Image src="./tailwind.svg" alt="html icon" width={50} height={50} />
+            <Image
+              src="./tailwind.svg"
+              alt="html icon"
+              width={50}
+              height={50}
+            />
           </Circle>
           <Circle ref={div9Ref} className="size-16">
-            <Image src="./supabase.svg" alt="html icon" width={50} height={50} />
+            <Image
+              src="./supabase.svg"
+              alt="html icon"
+              width={50}
+              height={50}
+            />
           </Circle>
         </div>
       </div>

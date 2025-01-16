@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import Nav from "@/components/ui/navbar/Nav";
+import { Suspense } from "react";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export const metadata: Metadata = {
@@ -17,14 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased dark`}
-      >
-        <Nav />
-        <ScrollProgress />
-        {children}
-        <Footer />
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="system">
+        <body className={`antialiased`}>
+          <Suspense>
+            <Nav />
+            <ScrollProgress />
+            {children}
+            <Footer />
+          </Suspense>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

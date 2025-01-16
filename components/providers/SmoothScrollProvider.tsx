@@ -1,44 +1,44 @@
-"use client"
+"use client";
 
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react";
 
 export const SmoothScrollContext = createContext({
   scroll: null as LocomotiveScroll | null,
-})
+});
 
 interface SmoothScrollProviderProps {
-  children: React.ReactNode
-  options?: any
+  children: React.ReactNode;
+  options?: any;
 }
 
 export const SmoothScrollProvider = ({
   children,
   options,
 }: SmoothScrollProviderProps) => {
-  const [scroll, setScroll] = useState<LocomotiveScroll | null>(null)
+  const [scroll, setScroll] = useState<LocomotiveScroll | null>(null);
 
   useEffect(() => {
     if (!scroll) {
-      ;(async () => {
+      (async () => {
         try {
-          const LocomotiveScroll = (await import("locomotive-scroll")).default
+          const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
           setScroll(
             new LocomotiveScroll({
               el: document.querySelector("[data-scroll-container]"),
               ...options,
-            })
-          )
+            }),
+          );
         } catch (error) {
-          throw Error(`[SmoothScrollProvider]: ${error}`)
+          throw Error(`[SmoothScrollProvider]: ${error}`);
         }
-      })()
+      })();
     }
 
     return () => {
-      scroll?.destroy()
-    }
-  }, [options, scroll])
+      scroll?.destroy();
+    };
+  }, [options, scroll]);
 
   return (
     <SmoothScrollContext.Provider
@@ -48,5 +48,5 @@ export const SmoothScrollProvider = ({
     >
       {children}
     </SmoothScrollContext.Provider>
-  )
-}
+  );
+};

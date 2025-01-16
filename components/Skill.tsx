@@ -1,7 +1,7 @@
-import React from 'react'
-import Counter from './ui/Counter'
-import { SkillContainer } from './ui/SkillContainer'
-import { Testimonials } from './Testimonials'
+import React from "react";
+import Counter from "./ui/Counter";
+import { SkillContainer } from "./ui/SkillContainer";
+import { Testimonials } from "./Testimonials";
 
 const Skill = () => {
   return (
@@ -10,7 +10,7 @@ const Skill = () => {
       <Testimonials />
       <SkillContainer />
     </>
-  )
-}
+  );
+};
 
-export default Skill
+export default Skill;

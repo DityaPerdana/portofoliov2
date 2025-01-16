@@ -1,18 +1,18 @@
-"use client"
-import { useTheme } from "next-themes"
-import React, { useEffect, useState } from "react"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Monitor, MoonIcon, SunIcon } from "lucide-react"
+"use client";
+import { useTheme } from "next-themes";
+import React, { useEffect, useState } from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Monitor, MoonIcon, SunIcon } from "lucide-react";
 
 function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <Tabs defaultValue={theme}>
@@ -28,7 +28,7 @@ function ThemeSwitcher() {
         </TabsTrigger>
       </TabsList>
     </Tabs>
-  )
+  );
 }
 
-export default ThemeSwitcher
+export default ThemeSwitcher;

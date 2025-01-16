@@ -10,8 +10,7 @@ export function Testimonials() {
       src: "/Athar.webp",
     },
     {
-      quote:
-        "web nya bagus, smooth, mulus, menikmati, biautipul",
+      quote: "web nya bagus, smooth, mulus, menikmati, biautipul",
       name: "Ramses Corda",
       designation: "Jack of All Trades",
       src: "/ramses.webp",
@@ -28,5 +27,5 @@ export function Testimonials() {
     <section id="testimonials">
       <AnimatedTestimonials autoplay testimonials={testimonials} />
     </section>
-  )
+  );
 }
