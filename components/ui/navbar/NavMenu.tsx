@@ -14,20 +14,13 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function NavMenu() {
   const [active, setActive] = useState<boolean>(false);
-  const [scroll, setScroll] = useState<LocomotiveScroll | null>(null);
+  const [scroll, setScroll] = useState<any>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const menuBgRef = useRef<HTMLDivElement | null>(null);
 
   const toggleHamburger = (status: boolean) => {
     setActive(status);
   };
-
-  useEffect(() => {
-    import("locomotive-scroll").then((locomotiveModule) => {
-      const locomotivescroll = new locomotiveModule.default();
-      setScroll(locomotivescroll);
-    });
-  }, []);
 
   useIsomorphicLayoutEffect(() => {
     gsap.context(() => {
