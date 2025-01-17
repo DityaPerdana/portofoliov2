@@ -91,21 +91,21 @@ export function SkillContainer() {
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref} className="size-16">
             <Image
-              src="./javascript-logo.svg"
-              alt="html icon"
+              src="./javascript.svg"
+              alt="javascript icon"
               width={50}
               height={50}
             />
           </Circle>
           <Circle ref={div7Ref} className="size-16">
-            <Image src="./nextjs.svg" alt="html icon" width={50} height={50} />
+            <Image src="./nextjs.svg" alt="nextjs icon" width={50} height={50} />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div8Ref} className="size-16">
             <Image
               src="./tailwind.svg"
-              alt="html icon"
+              alt="Tailwind icon"
               width={50}
               height={50}
             />
@@ -113,7 +113,7 @@ export function SkillContainer() {
           <Circle ref={div9Ref} className="size-16">
             <Image
               src="./supabase.svg"
-              alt="html icon"
+              alt="Supabase Icon"
               width={50}
               height={50}
             />
