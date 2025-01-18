@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 const About = () => {
   return (
     <div
-      className="min-w-full min-h-[100vh] flex items-center justify-center"
+      className="min-w-full min-h-screen flex items-center justify-center mt-24"
       id="about"
     >
       <h3 className="font-bold text-3xl -translate-y-10 hidden sm:block">
