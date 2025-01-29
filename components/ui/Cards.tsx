@@ -30,6 +30,11 @@ export const certificates = [
     desc: "Learning data fetching, bundler.",
     image: "/intermediet.webp",
   },
+  {
+    title: "Introduction to Cyber Cecurity",
+    desc: "Learning Cyber Cecurity Basics.",
+    image: "/cybersec.webp",
+  },
 ];
 
 // Example usage in a component
