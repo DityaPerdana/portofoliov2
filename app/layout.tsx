@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="keywords" content="Habib Herdiansyah, Bilal, SMKN 4 Payakumbuh">
         <body className={`antialiased`}>
       <ThemeProvider attribute="class" defaultTheme="system">
           <Suspense>
